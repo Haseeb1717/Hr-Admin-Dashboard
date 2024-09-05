@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin Dashboard</title>
+
+  <!-- Fonts and Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+  <div class="grid-container">
+
+    <!-- Header -->
+    <header class="header">
+      <div class="logo">
+        <img src="Group 263.png" alt="Logo">
+      </div>
+
+      <div class="menu-icon" onclick="toggleSidebar()">
+        <span class="material-icons-outlined">menu</span>
+      </div>
+
+        <div class="header-left">
+          <span class="material-icons-outlined">search</span>
+          <input type="search" placeholder="Search" class="search">
+        </div>
+      <div class="header-right">
+        <span class="material-icons-outlined">notifications</span>
+      </div>
+    </header>
+    <!-- End Header -->
+    <aside id="sidebar">
+      
+        <div class="sidebar-title">
+          <div class="sidebar-brand">
+            <img src="Group 261.png" alt="Brand">
+          </div>
+          <span class="material-icons-outlined">more_horiz</span>
+        </div>
+
+       
+        <ul class="sidebar-list">
+                <li class="sidebar-list-item" id="first-item-list">
+                    <a href="#" id="first-item-list1">
+                        <span class="material-icons-outlined"><img src="element-2 1.png"></span> Dashboard
+                    </a>
+                </li>
+                <li class="sidebar-list-item">
+                    <a href="#" id="first-item-list2">
+                        <span class="material-icons-outlined"><img src="chart-square.png"></span> Finance
+                    </a>
+                </li>
+                <li class="sidebar-list-item">
+                    <a href="#" id="first-item-list3">
+                        <span class="material-icons-outlined"><img src="personalcard.png"></span> Employees
+                    </a>
+                </li>
+                <li class="sidebar-list-item">
+                    <a href="#" id="first-item-list4">
+                        <span class="material-icons-outlined"><img src="briefcase.png"></span> Company
+                    </a>
+                </li>
+                <li class="sidebar-list-item">
+                    <a href="#" id="first-item-list5">
+                        <span class="material-icons-outlined"><img src="user-square.png"></span> Candidate
+                    </a>
+                </li>
+             
+                <li class="sidebar-list-item">
+                    <a href="#" id="first-item-list6">
+                        <span class="material-icons-outlined"><img src="calendar.png"></span> Calendar
+                    </a>
+                </li>
+            </ul>
+        <div class="sidebar-bottom">
+          <li class="sidebar-list-item">
+            <a href="#" target="_blank"  id="first-item-list7">
+              <span class="material-icons-outlined"><img src="frame.png"></span>Profile
+            </a>
+          </li>
+          <li class="sidebar-list-item">
+            <a href="#" target="_blank"  id="first-item-list8">
+              <span class="material-icons-outlined"><img src="setting-2.png"></span> Setting
+            </a>
+          </li>
+        </div>
+      </aside>
+      <!-- End Sidebar -->
+
+    <!-- Main Content -->
+    <main class="main-container">
+      <div class="main-cards">
+
+        <div class="card" id="card1">
+          <div class="card-inner">
+      <div class="text-card">
+<p>Total Employees</p>
+    </div>
+      <div class="img-card">
+    <img src="frame 13.png">    
+    </div>
+</div>
+    <p>856</p>
+    <span>Product</span>
+          
+</div>
+<div class="card"  id="card2">
+          <div class="card-inner">
+      <div class="text-card">
+<p>Job View</p>
+    </div>
+      <div class="img-card">
+    <img src="frame 13.png">    
+    </div>
+</div>
+    <p>3,342</p>
+    <span>Product</span>
+      
+</div>
+<div class="card"  id="card3">
+          <div class="card-inner">
+      <div class="text-card">
+<p>Job Applied</p>
+    </div>
+      <div class="img-card">
+    <img src="frame 13.png">    
+    </div>
+</div>
+    <p>77</p>
+    <span>Product</span>
+       
+</div>
+   
+<div class="card"  id="card4">
+          <div class="card-inner">
+      <div class="text-card">
+<p>Resigned Employees</p>
+    </div>
+      <div class="img-card">
+    <img src="frame 13.png">    
+    </div>
+</div>
+    <p>17</p>
+    <span>Product</span>
+      
+</div>
+   
+      </div>
+  
+  
+      <div class="card-chart">
+        <div class="card-header">
+            <h3>Job Statistics</h3>
+            <div class="dropdown">
+                <button class="dropdown-btn">This Month <span>▼</span></button>
+                <!-- Dropdown content can be added here -->
+            </div>
+        </div>
+        <div class="card-body">
+            <canvas id="jobStatisticsChart"></canvas>
+        </div>
+    </div>
+
+<div class="container-tab" id="card5">
+  <!-- First Card (Table) -->
+  <div class="card-anal table-card">
+    <div class="flex">  
+    <div class="flex-heading">
+      <h2>Employee Data</h2>
+    </div>
+    <div class="filter-flex">
+      <p>filter & sort </p>
+      <span class="material-symbols-outlined">
+        tune
+        </span>
+    </div>
+  </div>
+      <table>
+          <thead>
+              <tr>
+                  <th>Employee Name</th>
+                  <th>Department</th>
+                  <th>Age</th>
+                  <th>Disipline</th>
+                  <th>Status</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr class="tre">
+                  <td>John Doe</td>
+                  <td>Marketing</td>
+                  <td>22</td>
+                 <td><span style="color: #16C098; margin-left: 5px;">+</span> 100%</td>
+                  <td id="decor">Permanant</td>
+              </tr>
+              <tr>
+                  <td>John Doe</td>
+                  <td>Developer</td>
+                  <td>23</td>
+                  <td><span style="color: #16C098; margin-left: 5px;">+</span> 95%</td>
+               
+                  <td id="decorcont">Contract</td>
+              </tr>
+              <tr>
+                  <td>John Doe</td>
+                  <td>Finance</td>
+                  <td>30</td>
+                  <td ><span style="color: #16C098; margin-left: 5px;">+</span> 89%</td>
+               
+                  <td id="decor">Permanant</td>
+              </tr>
+          </tbody>
+      </table>
+  </div>
+
+  <!-- Second Card (Analytics) -->
+  <div class="card-anal" id="card6">
+      <h2>Employee Composition Analytics</h2>
+      <div class="chart-anal">
+        <canvas id="myDoughnutChart"></canvas>
+           
+      </div>
+  </div>
+</div>
+
+</main>
+    <!-- End Main Content -->
+
+  </div>
+
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://unpkg.com/scrollreveal"></script>
+<script src="admin.js"></script>
